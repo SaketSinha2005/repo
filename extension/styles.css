@@ -1,0 +1,126 @@
+.cs-suggestion-container {
+    background: white;
+    border: 2px solid #4285f4;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.15);
+    overflow: hidden;
+}
+
+.cs-suggestion-header {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cs-suggestion-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cs-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.cs-suggestion-body {
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.cs-suggestion-body pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202124;
+}
+
+.cs-suggestion-actions {
+    padding: 16px;
+    background: white;
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid #e8eaed;
+}
+
+/* Buttons */
+.cs-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cs-btn-primary {
+    background: #4285f4;
+    color: white;
+}
+
+.cs-btn-primary:hover {
+    background: #3367d6;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+}
+
+.cs-btn-secondary {
+    background: #f1f3f4;
+    color: #3c4043;
+}
+
+.cs-btn-secondary:hover {
+    background: #e8eaed;
+}
+
+.cs-btn-text {
+    background: transparent;
+    color: #5f6368;
+}
+
+.cs-btn-text:hover {
+    background: #f1f3f4;
+}
+
+/* Notifications */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cs-notification {
+    animation: slideIn 0.3s ease-out;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
