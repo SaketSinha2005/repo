@@ -143,8 +143,8 @@ I plan to execute these steps to complete my project.
 - [DONE] Step 4.1: Create `manifest.json` with necessary permissions (activeTab, storage).
 - [DONE] Step 4.2: Implement `content.js` to read email content from Gmail DOM.
 - [DONE] Step 4.3: Build the Popup UI (`popup.html`, `popup.js`) for user control.
-- [TO-DO] Step 4.4: Connect the extension to the Flask backend via API calls.
-- [TO-DO] Step 4.5: Render the AI-generated response back into the Gmail reply box.
+- [DONE] Step 4.4: Connect the extension to the Flask backend via API calls.
+- [DONE] Step 4.5: Render the AI-generated response back into the Gmail reply box.
 
 ### Phase 5: Testing & Refinement
 - [TO-DO] Step 5.1: Test the full pipeline with various email scenarios (Returns, Refunds, Spam).
