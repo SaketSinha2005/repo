@@ -118,9 +118,9 @@ graph TD
 I plan to execute these steps to complete my project.
 
 ### Phase 1: Setup & Infrastructure
-- [TO-DO] Step 1.1: Initialize project repository and virtual environment.
-- [TO-DO] Step 1.2: Configure environment variables (`.env`) for OpenAI and Database credentials.
-- [TO-DO] Step 1.3: Set up MongoDB instance and design the schema for products and policies.
+- [DONE] Step 1.1: Initialize project repository and virtual environment.
+- [DONE] Step 1.2: Configure environment variables (`.env`) for OpenAI and Database credentials.
+- [DONE] Step 1.3: Set up MongoDB instance and design the schema for products and policies.
 - [TO-DO] Step 1.4: Write `seed_database.py` to populate the database with sample product data for testing.
 
 ### Phase 2: Machine Learning (Spam Detection)
@@ -140,9 +140,9 @@ I plan to execute these steps to complete my project.
 - [TO-DO] Step 3.4: Integrate the Spam Classifier into the backend pipeline.
 
 ### Phase 4: Chrome Extension & Integration
-- [TO-DO] Step 4.1: Create `manifest.json` with necessary permissions (activeTab, storage).
-- [TO-DO] Step 4.2: Implement `content.js` to read email content from Gmail DOM.
-- [TO-DO] Step 4.3: Build the Popup UI (`popup.html`, `popup.js`) for user control.
+- [DONE] Step 4.1: Create `manifest.json` with necessary permissions (activeTab, storage).
+- [DONE] Step 4.2: Implement `content.js` to read email content from Gmail DOM.
+- [DONE] Step 4.3: Build the Popup UI (`popup.html`, `popup.js`) for user control.
 - [TO-DO] Step 4.4: Connect the extension to the Flask backend via API calls.
 - [TO-DO] Step 4.5: Render the AI-generated response back into the Gmail reply box.
 
