@@ -56,3 +56,93 @@ class ProductInfo(BaseModel):
         default=None,
         description="Description of the issue with the product"
     )
+
+class ProductQuery(BaseModel):
+    
+    customer_name: Optional[str] = Field(
+        default=None,
+        description="Customer's name if mentioned"
+    )
+    product_info: ProductInfo = Field(
+        description="Information about the product"
+    )
+    specific_question: str = Field(
+        description="The specific question or request from the customer"
+    )
+    urgency_level: Literal["low", "medium", "high"] = Field(
+        description="Urgency level of the request"
+    )
+
+
+class PolicyInfo(BaseModel):
+    
+    policy_type: str = Field(
+        description="Type of policy (return, refund, warranty, etc.)"
+    )
+    policy_details: str = Field(
+        description="Detailed policy information"
+    )
+    applicable: bool = Field(
+        description="Whether this policy applies to the customer's situation"
+    )
+    conditions: List[str] = Field(
+        description="Specific conditions or requirements"
+    )
+
+
+class EmailResponse(BaseModel):
+    
+    greeting: str = Field(
+        description="Personalized greeting"
+    )
+    acknowledgment: str = Field(
+        description="Acknowledgment of the customer's issue"
+    )
+    main_response: str = Field(
+        description="Main body of the response with solution/information"
+    )
+    action_items: List[str] = Field(
+        description="Specific actions the customer should take"
+    )
+    closing: str = Field(
+        description="Professional closing"
+    )
+    tone: Literal["formal", "friendly", "empathetic"] = Field(
+        description="Overall tone of the response"
+    )
+    full_response: str = Field(
+        description="Complete formatted email response"
+    )
+
+
+class DatabaseQuery(BaseModel):
+    
+    query_type: Literal["return_policy", "refund_amount", "product_info", "warranty_check"] = Field(
+        description="Type of database query needed"
+    )
+    product_id: Optional[str] = None
+    product_category: Optional[str] = None
+    purchase_date: Optional[str] = None
+    condition: Optional[str] = Field(
+        default=None,
+        description="Product condition (new, damaged, defective, etc.)"
+    )
+
+
+class ValidationResult(BaseModel):
+    is_valid: bool = Field(
+        description="Whether the response is valid and appropriate"
+    )
+    issues: List[str] = Field(
+        default_factory=list,
+        description="List of issues found in the response"
+    )
+    suggestions: List[str] = Field(
+        default_factory=list,
+        description="Suggestions for improvement"
+    )
+    confidence_score: float = Field(
+        description="Confidence in the response quality (0-1)",
+        ge=0.0,
+        le=1.0
+    )
