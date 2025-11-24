@@ -202,3 +202,10 @@ class DatabaseConnector:
 
 # Singleton instance
 _db_connector = None
+
+def get_database():
+    """Get or create database connector instance."""
+    global _db_connector
+    if _db_connector is None:
+        _db_connector = DatabaseConnector()
+    return _db_connector
