@@ -125,8 +125,8 @@ I plan to execute these steps to complete my project.
 
 ### Phase 2: Machine Learning (Spam Detection)
 - [DONE] Step 2.1: Collect and clean the spam/ham email dataset.
-- [TO-DO] Step 2.2: Implement `preprocessing.py` to tokenize and pad text sequences.
-- [TO-DO] Step 2.3: Design a CNN-based text classification model in `model.py`.
+- [DONE] Step 2.2: Implement `preprocessing.py` to tokenize and pad text sequences.
+- [DONE] Step 2.3: Design a CNN-based text classification model in `model.py`.
 - [DONE] Step 2.4: Train the model using `model.ipynb` and save the weights to `spam_classifier.h5`.
 
 ### Phase 3: Backend & Agent Logic
