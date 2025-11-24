@@ -124,10 +124,10 @@ I plan to execute these steps to complete my project.
 - [TO-DO] Step 1.4: Write `seed_database.py` to populate the database with sample product data for testing.
 
 ### Phase 2: Machine Learning (Spam Detection)
-- [TO-DO] Step 2.1: Collect and clean the spam/ham email dataset.
+- [DONE] Step 2.1: Collect and clean the spam/ham email dataset.
 - [TO-DO] Step 2.2: Implement `preprocessing.py` to tokenize and pad text sequences.
 - [TO-DO] Step 2.3: Design a CNN-based text classification model in `model.py`.
-- [TO-DO] Step 2.4: Train the model using `model.ipynb` and save the weights to `spam_classifier.h5`.
+- [DONE] Step 2.4: Train the model using `model.ipynb` and save the weights to `spam_classifier.h5`.
 
 ### Phase 3: Backend & Agent Logic
 - [TO-DO] Step 3.1: Create Flask server (`server.py`) with endpoints for classification and generation.
