@@ -121,7 +121,7 @@ I plan to execute these steps to complete my project.
 - [DONE] Step 1.1: Initialize project repository and virtual environment.
 - [DONE] Step 1.2: Configure environment variables (`.env`) for OpenAI and Database credentials.
 - [DONE] Step 1.3: Set up MongoDB instance and design the schema for products and policies.
-- [TO-DO] Step 1.4: Write `seed_database.py` to populate the database with sample product data for testing.
+- [DONE] Step 1.4: Write `seed_database.py` to populate the database with sample product data for testing.
 
 ### Phase 2: Machine Learning (Spam Detection)
 - [DONE] Step 2.1: Collect and clean the spam/ham email dataset.
@@ -131,7 +131,7 @@ I plan to execute these steps to complete my project.
 
 ### Phase 3: Backend & Agent Logic
 - [TO-DO] Step 3.1: Create Flask server (`server.py`) with endpoints for classification and generation.
-- [TO-DO] Step 3.2: Define Pydantic schemas (`schemas.py`) for structured data exchange.
+- [DONE] Step 3.2: Define Pydantic schemas (`schemas.py`) for structured data exchange.
 - [TO-DO] Step 3.3: Implement LangGraph workflow (`workflow.py`) with nodes:
     - `classify_query_node`: Determines email intent.
     - `retrieve_context_node`: Fetches relevant policy from MongoDB.
