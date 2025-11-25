@@ -130,7 +130,7 @@ I plan to execute these steps to complete my project.
 - [DONE] Step 2.4: Train the model using `model.ipynb` and save the weights to `spam_classifier.h5`.
 
 ### Phase 3: Backend & Agent Logic
-- [TO-DO] Step 3.1: Create Flask server (`server.py`) with endpoints for classification and generation.
+- [DONE] Step 3.1: Create Flask server (`server.py`) with endpoints for classification and generation.
 - [DONE] Step 3.2: Define Pydantic schemas (`schemas.py`) for structured data exchange.
 - [TO-DO] Step 3.3: Implement LangGraph workflow (`workflow.py`) with nodes:
     - `classify_query_node`: Determines email intent.
