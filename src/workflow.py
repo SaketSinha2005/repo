@@ -51,3 +51,28 @@ except Exception as e:
     print(f"Error initializing LLM: {e}")
     llm = None
 
+db = get_database()
+
+@tool
+def get_return_policy_tool(product_category: str = None) -> dict:
+    """Get return policy from database."""
+    return db.get_return_policy(product_category)
+
+
+@tool
+def check_product_returnable_tool(product_id: str = None, product_category: str = None) -> dict:
+    """Check if product is returnable."""
+    return db.check_product_returnable(product_id, product_category)
+
+
+@tool
+def calculate_refund_tool(order_amount: float, days_since_purchase: int, 
+                         product_condition: str = "unused") -> dict:
+    """Calculate refund amount."""
+    return db.calculate_refund(order_amount, days_since_purchase, product_condition)
+
+
+@tool
+def get_damage_protocol_tool(damage_type: str = "general") -> dict:
+    """Get damage handling protocol."""
+    return db.get_damage_protocol(damage_type)
