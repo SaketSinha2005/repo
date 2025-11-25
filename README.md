@@ -132,12 +132,12 @@ I plan to execute these steps to complete my project.
 ### Phase 3: Backend & Agent Logic
 - [DONE] Step 3.1: Create Flask server (`server.py`) with endpoints for classification and generation.
 - [DONE] Step 3.2: Define Pydantic schemas (`schemas.py`) for structured data exchange.
-- [TO-DO] Step 3.3: Implement LangGraph workflow (`workflow.py`) with nodes:
+- [DONE] Step 3.3: Implement LangGraph workflow (`workflow.py`) with nodes:
     - `classify_query_node`: Determines email intent.
     - `retrieve_context_node`: Fetches relevant policy from MongoDB.
     - `generate_response_node`: Uses LLM to draft a reply.
     - `validate_response_node`: Checks response quality.
-- [TO-DO] Step 3.4: Integrate the Spam Classifier into the backend pipeline.
+- [DONE] Step 3.4: Integrate the Spam Classifier into the backend pipeline.
 
 ### Phase 4: Chrome Extension & Integration
 - [DONE] Step 4.1: Create `manifest.json` with necessary permissions (activeTab, storage).
