@@ -76,3 +76,63 @@ def calculate_refund_tool(order_amount: float, days_since_purchase: int,
 def get_damage_protocol_tool(damage_type: str = "general") -> dict:
     """Get damage handling protocol."""
     return db.get_damage_protocol(damage_type)
+
+tools = [get_return_policy_tool, check_product_returnable_tool, 
+         calculate_refund_tool, get_damage_protocol_tool]
+
+
+def classify_query_node(state: EmailProcessingState) -> EmailProcessingState:
+    
+    if not llm:
+        state['error'] = "LLM not initialized. Check API keys OPENAI_API_KEY"
+        return state
+    
+    try:
+        print("DEBUG: Entered classify_query_node")
+        email = state['email_content']
+        
+        prompt = f"Classify this customer email into one category: product_return, refund_request, product_damage, or general_inquiry.\n\nEmail: {email}\n\nCategory:"
+        
+        result = llm.invoke(prompt)
+        
+        from .schemas import QueryType
+        classification = EmailClassification(
+            query_type=QueryType.GENERAL,
+            confidence=0.9,
+            keywords=["general", "inquiry"],
+            requires_database_lookup=False,
+            reasoning="Default classification for simplified workflow"
+        )
+        print(f"DEBUG: Created classification: requires_database_lookup={classification.requires_database_lookup}")
+        
+        state['classification'] = classification
+        state['messages'] = state.get('messages', []) + [
+            HumanMessage(content=email),
+            AIMessage(content="Classified email")
+        ]
+    
+    except Exception as e:
+        error_msg = f"Error classifying email: {str(e)}"
+        print(f"Error classifying email: {error_msg}")
+        state['error'] = error_msg
+    
+    return state
+
+
+def retrieve_context_node(state: EmailProcessingState) -> EmailProcessingState:
+    
+    classification = state['classification']
+    
+    context = {}
+    
+    if classification.query_type.value in ["product_return", "refund_request"]:
+        policy = get_return_policy_tool.invoke({})
+        context['return_policy'] = policy
+    
+    if classification.query_type.value == "product_damage":
+        protocol = get_damage_protocol_tool.invoke({"damage_type": "general"})
+        context['damage_protocol'] = protocol
+    
+    state['retrieved_context'] = context
+    state['database_info'] = context 
+    return state
