@@ -147,9 +147,9 @@ I plan to execute these steps to complete my project.
 - [DONE] Step 4.5: Render the AI-generated response back into the Gmail reply box.
 
 ### Phase 5: Testing & Refinement
-- [TO-DO] Step 5.1: Test the full pipeline with various email scenarios (Returns, Refunds, Spam).
-- [TO-DO] Step 5.2: Refine prompts in `prompts.py` to improve response tone and accuracy.
-- [TO-DO] Step 5.3: Verify error handling for API failures or database connection issues.
+- [DONE] Step 5.1: Test the full pipeline with various email scenarios (Returns, Refunds, Spam).
+- [DONE] Step 5.2: Refine prompts in `prompts.py` to improve response tone and accuracy.
+- [DONE] Step 5.3: Verify error handling for API failures or database connection issues.
 
 ## Conclusion:
 
