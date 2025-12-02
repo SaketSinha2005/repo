@@ -103,7 +103,7 @@ graph TD
 
 ## Video Summary Link: 
 
-[Link to video]
+[\[Link to video\]](https://drive.google.com/file/d/1Svyw8G9rP8UbuOpjgDGC_PUW5ShrVxBf/view?usp=drive_link)
 
 - you can use this free tool for recording https://screenrec.com/
 - Video format should be like this:
